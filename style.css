@@ -1,0 +1,206 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#container {
+    padding-top: 30px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./images/library.jpg");
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    justify-items: center;
+    gap: 40px;
+}
+
+#inventory {
+    grid-row: 1 / 2;
+    width: 80%;
+    height: 500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#heading {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px;
+    align-self: center;
+}
+
+#my-books {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    justify-content: center;
+}
+
+.card {
+    background-color: bisque;
+    padding: 10px;
+    font-size: 12px;
+    width: 220px;
+    height: auto;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    gap: 2px;
+    margin: 10px;
+}
+
+.card-title {
+    grid-row: 1 / 3;
+    justify-self: center;
+    font-weight: 700;
+}
+
+#button-row {
+    grid-row: 8 / 9;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon {
+    width: 16px;
+    height: auto;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.icon:active {
+    transform: scale(.8);
+}
+
+.card-label {
+    font-weight: 500;
+}
+
+.card-value {
+    color: blue;
+}
+
+.card > div {
+    display: flex;
+    gap: 4px;
+}
+
+#book-modal {
+    width: 400px;
+    border-style: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -70%);
+}
+
+#book-data {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#form-header {
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-row {
+    padding: 10px;
+}
+
+.read-switch, .card-switch {
+    display: none;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.toggle:after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+    top: 1px;
+    left: 1px;
+    transition: all 0.1s;
+}
+
+.read-switch:checked + .toggle::after, .card-switch:checked + .toggle::after {
+    left: 16px;
+}
+
+.read-switch:checked + .toggle, .card-switch:checked + .toggle {
+    background-color: green;
+}
+
+#form-buttons {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#form-buttons > button {
+    width: 70px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white
+}
+
+#get-form {
+    grid-row: 2 / 3;    
+    background-color: white;
+    width: 200px;
+    height: 60px;
+    border-style: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#get-form:hover, button:hover {
+    transform: scale(1.1);
+}
+
+#get-form:active, button:active {
+    transform: scale(.9);
+}
+
+#btn-image {
+    width: 50px;
+    height: auto;
+}
+
+#btn-text{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+input, #category {
+    padding: 5px;
+    height: 30px;
+}
+
+input {
+    width: 250px;
+}

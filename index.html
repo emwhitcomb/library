@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Bubblegum+Sans&family=Lacquer&family=Lato:wght@700&family=Libre+Franklin&family=Nunito+Sans:wght@600&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <div id="inventory">
+            <span id="heading">MY LIBRARY</span>
+            <div id="my-books">
+            </div>
+
+            <dialog id="book-modal">
+                <form id="book-data" action="" method="get" autocomplete="off">
+                    <p id="form-header">BOOK INFORMATION</p>
+                    <div class="form-row">
+                        <label for="title">TITLE:</label>&nbsp
+                        <input type="text" name="title" id="title" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="author">AUTHOR:</label>&nbsp
+                        <input type="text" name="author" id="author" required>
+                    </div>                
+                    <div class="form-row">
+                        <label for="category">FICTION/NONFICTION:&nbsp
+                            <select name="category" id="category">
+                                <option value="" selected></option>
+                                <option value="FICTION">FICTION</option>
+                                <option value="NON-FICTION">NON-FICTION</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <label for="pages">PAGES:</label>&nbsp
+                        <input type="text" name="pages" id="pages">
+                    </div>
+                    <div class="form-row">
+                        <span>PREVIOUSLY READ:</span>
+                        <input class="read-switch" name="have-read" id="have-read" type="checkbox">
+                        <label class="toggle" for="have-read"></label>
+                    </div>
+                    <div class="form-row">
+                        <div id="form-buttons">
+                            <button id="cancel" value="cancel" formmethod="dialog">CANCEL</button>
+                            <button id="submission" type="submit" value="Submit">ADD</button>
+                        </div>
+                    </div>
+                </form>
+            </dialog>
+        </div>
+        <div id="get-form">
+            <img src="./images/book.svg" alt="book" id="btn-image">
+            <span id="btn-text">ADD A BOOK</span>
+        </div>
+    </div>
+
+</body>
+</html>
